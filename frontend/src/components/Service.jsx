@@ -31,7 +31,8 @@ export default function Services() {
 
 
   return (
-  <section className="services-section">
+    <>
+ {/* <section className="services-section">
   <h2>Our Services</h2>
 
   <div className="services-row">
@@ -57,24 +58,26 @@ export default function Services() {
     </div>
 
   </div>
-</section>
-    // <section className="services-section">
-    //   <h2>Our Services</h2>
+</section> */}
 
-    //   <div className="services-grid">
-    //     {services.length === 0 ? (
-    //       <p>No services available</p>
-    //     ) : (
-    //       services.map((item) => (
-    //         <ServiceCard
-    //           key={item._id}
-    //           image={item.imageUrl}
-    //           title={item.title}
-    //           description={item.description}
-    //         />
-    //       ))
-    //     )}
-    //   </div>
-    // </section>
+    <section className="services-section">
+      <h2>Our Services</h2>
+
+     <div className="services-grid">
+        {services.length === 0 ? (
+           <p>No services available</p>
+        ) : (
+          services.map((item) => (
+            <ServiceCard
+              key={item._id}
+               image={item.imageUrl}
+               title={item.title}
+               description={item.description}
+            />
+           ))
+         )}
+       </div>
+     </section>
+     </>
   );
 }

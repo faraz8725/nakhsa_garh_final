@@ -67,47 +67,53 @@ export default function Contact() {
       <div className="contact-container">
 
         <div className="contact-item">
-          <FaMapMarkerAlt className="contact-icon" />
-          <h4>Location</h4>
-          <p>Your City, Country</p>
-        </div>
+       <a
+       href="https://www.google.com/maps?q=26°51'11.1N 80°53'56.6E"
+        target="_blank"
+        rel="noopener noreferrer"
+       >
+    <FaMapMarkerAlt className="contact-icon" />
+    <h4>Location</h4>
+   
+  </a>
+</div>
+
+       <div className="contact-item">
+        <a href="tel:+917398434859">
+  <FaPhoneAlt className="contact-icon" />
+  <h4>Phone</h4>
+  </a>
+</div>
+
+        
 
         <div className="contact-item">
-          <FaPhoneAlt className="contact-icon" />
-          <h4>Phone</h4>
-          <p>+91 9415289854</p>
-          <p>+91 8573815664</p>
-        </div>
-
-        <div className="contact-item">
-          <FaEnvelope className="contact-icon" />
-          <h4>Email</h4>
-          <p>nakshaghardeoria@gmail.com</p>
-        </div>
-
-        <div className="contact-item">
+          <a href="https://www.instagram.com/_faraz.agha/?__pwa=1#">
           <FaInstagram className="contact-icon" />
           <h4>Instagram</h4>
-          <p>@your_instagram</p>
+          
+          </a>
         </div>
 
-        <div className="contact-item">
-          <FaLinkedin className="contact-icon" />
-          <h4>LinkedIn</h4>
-          <p>linkedin.com/in/yourprofile</p>
-        </div>
 
         <div className="contact-item">
+          <a href="https://www.facebook.com/share/182rnidPS7/">
           <FaFacebook className="contact-icon" />
           <h4>Facebook</h4>
-          <p>Facebook.com/in/yourprofile</p>
+          </a>
         </div>
 
         <div className="contact-item">
-          <FaWhatsapp className="contact-icon" />
-          <h4>Whatsapp</h4>
-          <p>whatsapp.com/in/yourprofile</p>
-        </div>
+  <a
+    href="https://wa.me/917398434859?text=Hello%20I%20want%20to%20contact%20you"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaPhoneAlt className="contact-icon" />
+    <h4>WhatsApp</h4>
+    
+  </a>
+</div>
 
       </div>
     </section>

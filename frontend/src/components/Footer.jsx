@@ -19,12 +19,7 @@ function Footer() {
           <a href="#">Contact</a>
         </div>
 
-        <div className="footer-social">
-          <span>🌐</span>
-          <span>💼</span>
-          <span>📺</span>
-          <span>💼</span>
-        </div>
+        
 
       </div>
 
