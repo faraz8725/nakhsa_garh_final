@@ -5,8 +5,8 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const ImageKit = require("imagekit");
 
-const User = require("../models/User");
-const Media = require("../models/Media");
+const User = require("../models/user");
+const Media = require("../models/media");
 
 
 // ===============================
