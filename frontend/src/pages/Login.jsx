@@ -22,7 +22,7 @@ export default function Login() {
       if (isLogin) {
         // 🔐 LOGIN API
         const res = await axios.post(
-          "http://localhost:5000/api/user/login",
+            `${import.meta.env.VITE_API_URL}/api/user/login`,
           {
             email: formData.email,
             password: formData.password,
@@ -46,7 +46,7 @@ export default function Login() {
       } else {
         // 📝 REGISTER API
         const res = await axios.post(
-          "http://localhost:5000/api/user/register",
+           `${import.meta.env.VITE_API_URL}/api/user/register`,
           formData
         );
 

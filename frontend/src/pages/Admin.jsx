@@ -18,17 +18,29 @@ export default function AdminPanel() {
   const token = localStorage.getItem("token");
 
   // 🔥 Fetch All Services
-  const fetchServices = async () => {
+  /*const fetchServices = async () => { /
     try {
       const res = await axios.get(
         "http://localhost:5000/api/user/allMedia"
-      );
+      ); *
+
       setServices(res.data);
     } catch (err) {
       console.error("Fetch Error:", err);
     }
   };
+*/
+const fetchServices = async () => {
+  try {
+    const res = await axios.get(
+      `${import.meta.env.VITE_API_URL}/api/user/allMedia`
+    );
 
+    setServices(res.data);
+  } catch (err) {
+    console.error("Fetch Error:", err);
+  }
+};
   useEffect(() => {
     fetchServices();
   }, []);
@@ -63,7 +75,7 @@ export default function AdminPanel() {
       if (editId) {
         // UPDATE
         await axios.put(
-          `http://localhost:5000/api/user/updateMedia/${editId}`,
+          `${import.meta.env.VITE_API_URL}/api/user/updateMedia/${editId}`,
           formData,
           {
             headers: {
@@ -74,15 +86,24 @@ export default function AdminPanel() {
         alert("Service Updated ✅");
       } else {
         // ADD
-        await axios.post(
-          "http://localhost:5000/api/user/uploadMedia",
+        /*await axios.post(
+          '${import.meta.env.VITE_API_URL}/api/user/uploadMedia',
           formData,
           {
             headers: {
               Authorization: `Bearer ${token}`
             }
           }
-        );
+        ); */
+        await axios.post(
+  `${import.meta.env.VITE_API_URL}/api/user/uploadMedia`,
+  formData,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  }
+);
         alert("Service Added ✅");
       }
 
@@ -112,7 +133,7 @@ export default function AdminPanel() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/user/deleteMedia/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/user/deleteMedia/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
